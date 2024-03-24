@@ -16,7 +16,7 @@
         ||
         <a href="contract.html" class="header">Contract</a>
       </nav>
-      <h1>Red Moose's Hobby</h1>
+      <h1>Red Moose's Hobby: Soccer</h1>
     </header>
 
     <main>
@@ -25,48 +25,37 @@
       </p>
     </main>
 
-    <footer>
-     
-
-      <p>
+   <footer>
+    <p>
         Designed by <a href="moosetech.com" class="design">MooseTech</a> ©2004
-      </p>
+    </p>
 
-      <a
-        href="https://validator.w3.org/check?uri=referer"
-        id="validation_link_html"
-      >
-        <img
-          style="border: 0; width: 88px; height: 31px"
-          src="https://mytienhoang.github.io/itis3135/z_archives/html_validation.png"
-          alt="Valid HTML!"
-        />
-      </a>
-      <a
-        href="https://jigsaw.w3.org/css-validator/check/referer"
-        id="validation_link_css"
-      >
-        <img
-          style="border: 0; width: 88px; height: 31px"
-          src="https://jigsaw.w3.org/css-validator/images/vcss"
-          alt="Valid CSS!"
-        />
-      </a>
+    <a href="https://validator.w3.org/check?uri=referer" id="validation_link_html">
+        <img style="border: 0; width: 88px; height: 31px"
+            src="https://mytienhoang.github.io/itis3135/z_archives/html_validation.png"
+            alt="Valid HTML!" />
+    </a>
+    <a href="https://jigsaw.w3.org/css-validator/check/referer" id="validation_link_css">
+        <img style="border: 0; width: 88px; height: 31px"
+            src="https://jigsaw.w3.org/css-validator/images/vcss"
+            alt="Valid CSS!" />
+    </a>
 
-      <script>
-        document
-          .getElementById("validation_link_html")
-          .setAttribute(
-            "href",
-            "https://validator.w3.org/check?uri=" + location.href
-          );
-        document
-          .getElementById("validation_link_css")
-          .setAttribute(
-            "href",
-            "https://jigsaw.w3.org/css-validator/validator?uri=" + location.href
-          );
-      </script>
-    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@axe-core/react@latest/dist/axe.min.js"></script>
+    <script>
+        axe.run().then((results) => {
+            if (results.violations.length > 0) {
+                console.error('Accessibility violations:', results.violations);
+                document.getElementById("accessibility_status").innerText = "Accessibility issues found!";
+            } else {
+                console.log('No accessibility violations found!');
+                document.getElementById("accessibility_status").innerText = "No accessibility issues found!";
+            }
+        });
+    </script>
+
+    <p id="accessibility_status"></p>
+</footer>
+
   </body>
 </html>
